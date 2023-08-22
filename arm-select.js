@@ -27,23 +27,20 @@ function searchableSelect(select) {
 }
 
 function getSearchInput(select) {
-    select.classList.add("position-relative");
-    select.classList.add("d-none");
+    select.classList.add("position-absolute");
+    select.classList.add("d-none"); 
     select.classList.add("mt-2");
-    //select.setAttribute("style", "width:20%;");
+    select.setAttribute("style", "width:inherit;");
 
     var input = document.createElement('input');
-    //input.style = "width:100%; right:0; top: 0;";
     input.id = select.id + "-search-input";
     input.setAttribute("arm-select-input", select.id);
     input.type = "text";
     input.classList.add("form-select");
     input.autocomplete = "off";
     input.value = getSelectedText(select.id);
-    //input.classList.add("position-relative");
 
     input.addEventListener("focus", (event) => { return focusInput(event); })
-    //input.addEventListener("focusout", (event) => { return blurInput(event) });
     input.addEventListener("keyup", (event) => { return armSelectSearch(event); })
 
     return input;
