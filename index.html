@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arm-select</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row mt-5">
+        <div class="col-6 mx-auto">
+            <select class="form-select" id="my-select" arm-select>
+                <option value="-1" disabled selected>--Select--</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>  
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+            </select>
+        </div>
+    </div>
+    <script src="arm-select.js"></script>
+    <script>
+        docReady(() => {
+            armSelect();
+        });
+    </script>
+</body>
+</html>
